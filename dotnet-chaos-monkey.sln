@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C4706EDE-65E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaosMonkey", "src\ChaosMonkey\ChaosMonkey.csproj", "{A2A48DF1-EADC-4A67-9EBF-D93EB8805914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWebApp", "src\ExampleWebApp\ExampleWebApp.csproj", "{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +34,21 @@ Global
 		{A2A48DF1-EADC-4A67-9EBF-D93EB8805914}.Release|x64.Build.0 = Release|Any CPU
 		{A2A48DF1-EADC-4A67-9EBF-D93EB8805914}.Release|x86.ActiveCfg = Release|Any CPU
 		{A2A48DF1-EADC-4A67-9EBF-D93EB8805914}.Release|x86.Build.0 = Release|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Debug|x64.Build.0 = Debug|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Debug|x86.Build.0 = Debug|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Release|x64.ActiveCfg = Release|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Release|x64.Build.0 = Release|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Release|x86.ActiveCfg = Release|Any CPU
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A2A48DF1-EADC-4A67-9EBF-D93EB8805914} = {C4706EDE-65E1-4AFD-A808-DB98AB05D4B5}
+		{E1D795A4-6CA9-4041-AA88-AD70CB33AE8A} = {C4706EDE-65E1-4AFD-A808-DB98AB05D4B5}
 	EndGlobalSection
 EndGlobal

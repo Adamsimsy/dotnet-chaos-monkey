@@ -15,7 +15,7 @@ steps:
 - script: dotnet publish ".\src\ExampleWebApp\ExampleWebApp.csproj" --configuration $(buildConfiguration)
   displayName: 'dotnet publish ExampleWebApp'
 
-- task: PublishBuildArtifacts
+- task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '.\src\ExampleWebApp\bin\Debug\netcoreapp2.1\publish' 
     artifactName: 'ExampleWebApp' 

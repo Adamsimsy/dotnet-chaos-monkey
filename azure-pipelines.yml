@@ -15,12 +15,11 @@ steps:
 - script: dotnet publish ".\src\ExampleWebApp\ExampleWebApp.csproj" --configuration $(buildConfiguration)
   displayName: 'dotnet publish ExampleWebApp'
 
-- task: ArchiveFiles@1
-  displayName: "Archive files"
+- task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish"
+    rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/"
     includeRootFolder: false
-    archiveFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/$(Build.BuildId).zip"
+    archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
 
 - task: PublishBuildArtifacts@1
   inputs:

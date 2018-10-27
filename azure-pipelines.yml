@@ -17,7 +17,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: 'src/ExampleWebApp/bin/release/netcoreapp2.1/publish' 
+    pathtoPublish: 'src/ExampleWebApp/bin/release/netcoreapp2.1/publish/' 
     artifactName: 'ExampleWebApp' 
     publishLocation: 'Azure Artifacts' # Options: container, filePath
     #targetPath: # Required when publishLocation == FilePath

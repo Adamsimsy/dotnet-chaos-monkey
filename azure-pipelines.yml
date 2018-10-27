@@ -18,7 +18,7 @@ steps:
 - task: ArchiveFiles@1
   displayName: "Archive files"
   inputs:
-    rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/"
+    rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish"
     includeRootFolder: false
     archiveFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/$(Build.BuildId).zip"
 

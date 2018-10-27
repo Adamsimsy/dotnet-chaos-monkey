@@ -12,19 +12,19 @@ variables:
 steps:
 - script: dotnet build ".\dotnet-chaos-monkey.sln" --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- script: dotnet publish ".\src\ExampleWebApp\ExampleWebApp.csproj" --configuration $(buildConfiguration)
+- script: dotnet publish ".\src\ExampleWebApp\ExampleWebApp.csproj" -o "$(Build.ArtifactStagingDirectory)/publish/" --configuration $(buildConfiguration)
   displayName: 'dotnet publish ExampleWebApp'
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/"
+    rootFolderOrFile: "$(Build.ArtifactStagingDirectory)/publish/"
     includeRootFolder: false
-    archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
+    archiveFile: "$(Build.ArtifactStagingDirectory)/ExampleWebApp.$(Build.BuildId).zip"
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
-    artifactName: 'ExampleWebApp' 
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/ExampleWebApp.$(Build.BuildId).zip' 
+    artifactName: 'drop' 
     publishLocation: 'Container' # Options: container, filePath
     #targetPath: # Required when publishLocation == FilePath
     #parallel: false # Optional

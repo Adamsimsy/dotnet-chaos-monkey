@@ -19,7 +19,7 @@ steps:
   inputs:
     pathtoPublish: 'src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/' 
     artifactName: 'ExampleWebApp' 
-    publishLocation: 'Visual Studio Team Services' # Options: container, filePath, Azure Artifacts
+    publishLocation: 'Visual Studio Team Services/TFS' # Options: container, filePath, Azure Artifacts
     #targetPath: # Required when publishLocation == FilePath
     #parallel: false # Optional
     #parallelCount: # Optional

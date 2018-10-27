@@ -15,9 +15,16 @@ steps:
 - script: dotnet publish ".\src\ExampleWebApp\ExampleWebApp.csproj" --configuration $(buildConfiguration)
   displayName: 'dotnet publish ExampleWebApp'
 
+- task: ArchiveFiles@1
+    displayName: "Archive files"
+    inputs:
+      rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/"
+      includeRootFolder: false
+      archiveFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/$(Build.BuildId).zip"
+
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: 'src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/' 
+    pathtoPublish: 'src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/$(Build.BuildId).zip' 
     artifactName: 'ExampleWebApp' 
     publishLocation: 'Container' # Options: container, filePath
     #targetPath: # Required when publishLocation == FilePath

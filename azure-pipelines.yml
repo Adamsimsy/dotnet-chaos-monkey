@@ -16,11 +16,11 @@ steps:
   displayName: 'dotnet publish ExampleWebApp'
 
 - task: ArchiveFiles@1
-    displayName: "Archive files"
-    inputs:
-      rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/"
-      includeRootFolder: false
-      archiveFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/$(Build.BuildId).zip"
+  displayName: "Archive files"
+  inputs:
+    rootFolderOrFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/"
+    includeRootFolder: false
+    archiveFile: "src/ExampleWebApp/bin/Release/netcoreapp2.1/publish/$(Build.BuildId).zip"
 
 - task: PublishBuildArtifacts@1
   inputs:

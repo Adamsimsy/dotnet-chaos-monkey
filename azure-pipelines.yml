@@ -10,7 +10,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build dotnet-chaos-monkey.sln --configuration $(buildConfiguration)
+- script: dotnet build .\dotnet-chaos-monkey.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- script: dotnet publish .\src\ExampleWebApp\ --configuration $(buildConfiguration)
+- script: dotnet publish .\src\ExampleWebApp\ExampleWebApp.csproj --configuration $(buildConfiguration)
   displayName: 'dotnet publish ExampleWebApp'

@@ -56,6 +56,9 @@ namespace ExampleWebApp
             //Inject chaos monkey middleware
             app.UseChaosMonkeyMiddleware();
 
+            //Delay startup example
+            //Task.Delay(20000).Wait();
+
             app.UseMvc();
         }
     }

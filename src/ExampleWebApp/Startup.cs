@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ChaosMonkey;
 
 namespace ExampleWebApp
 {
@@ -51,6 +52,9 @@ namespace ExampleWebApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            //Inject chaos monkey middleware
+            app.UseChaosMonkeyMiddleware();
 
             app.UseMvc();
         }
